@@ -33,8 +33,9 @@ from tld import get_tld
 
 from confusables import unconfuse
 import smtplib
-from email.MIMEMultipart import MIMEMultipart
-from email.MIMEText import MIMEText
+
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 
 certstream_url = 'wss://certstream.calidog.io'
