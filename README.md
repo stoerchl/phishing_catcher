@@ -2,9 +2,18 @@
 
 Catching malicious phishing domain names using [certstream](https://certstream.calidog.io/) SSL certificates live stream.
 
-This is just a working PoC, feel free to contribute and tweak the code to fit your needs 👍
+This is a fork of the original phishing_catcher (https://github.com/x0rz/phishing_catcher) project.
 
-![usage](https://i.imgur.com/4BGuXkR.gif)
+### Changes
+
+- Newly registered domains
+
+  As a second source to catch potential phishing sites I added newly registered domains. They are published one a day and can be evaluated with the same algorithm as the certificates. Source (https://whoisds.com/newly-registered-domains)
+
+- Email notification
+
+  Sending the found potential phishing domains by email to a given address in a defined time interval.
+
 
 ### Installation
 
@@ -22,15 +31,8 @@ pip install -r requirements.txt
 ```
 $ ./catch_phishing.py
 ```
-
-### Example phishing caught
-
-![Paypal Phishing](https://i.imgur.com/AK60EYz.png)
+To run it in the background the script can be started in a screen session.
 
 License
 ----
 GNU GPLv3
-
-If this tool has been useful for you, feel free to thank me by buying me a coffee
-
-[![Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoff.ee/x0rz)
